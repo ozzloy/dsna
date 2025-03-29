@@ -4,7 +4,24 @@ class Solution {
    * @param {string} t
    * @return {boolean}
    */
-  isAnagram(s, t) {}
+  isAnagram(s, t) {
+    // if s and t have different lengths, they're not anagrams
+    if (s.length !== t.length) return false;
+    // count how many times each character occurs in s
+    const count = {};
+    for (const c of s) count[c] = (count[c] || 0) + 1;
+    // go through all the characters of t
+    // if the character's count is more than 0
+    for (const c of t)
+      if (count[c])
+        // decrement the count of that character
+        count[c]--;
+      // if the count was already 0, or undefined
+      // s and t aren't anagrams
+      else return false;
+    // s and t are anagrams
+    return true;
+  }
 }
 
 s00 = "racecar";
