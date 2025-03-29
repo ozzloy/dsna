@@ -1,0 +1,21 @@
+* contains duplicate
+
+https://neetcode.io/problems/duplicate-integer
+
+Given an integer array nums, return true if any value appears more
+than once in the array, otherwise return false.
+
+** example 1
+#+begin_src python
+  nums = [1, 2, 3, 3]
+  expect = True
+#+end_src
+** example 2
+#+begin_src python
+  nums = [1, 2, 3, 4]
+  expect = False
+#+end_src
+
+* recommended time & space complexity
+You should aim for a solution with O(n) time and O(n) space, where n
+is the size of the input array.
