@@ -1,0 +1,5 @@
+* keeping dsna practice in here
+
+* helpful tool
+recode mode
+https://codeberg.org/ozzloy/recode
