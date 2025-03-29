@@ -20,3 +20,39 @@ Output: true
 Input: s = "jar", t = "jam"
 Output: false
 #+end_quote
+
+
+do it in javascript
+
+
+
+To solve this problem in JavaScript, you can count the characters in
+each string and check if they match. Here's a concise solution:
+
+#+begin_src javascript
+  function isAnagram(s, t) {
+    // If lengths are different, they can't be anagrams
+    if (s.length !== t.length) return false;
+
+    // Create character frequency map
+    const charCount = {};
+
+    // Count characters in first string
+    for (let char of s) {
+      charCount[char] = (charCount[char] || 0) + 1;
+    }
+
+    // Check against second string
+    for (let char of t) {
+      // If character doesn't exist or count becomes negative, not an
+      // anagram
+      if (!charCount[char]) return false;
+      charCount[char]--;
+    }
+
+    return true;
+  }
+#+end_src
+
+This solution has O(n) time complexity where n is the length of the
+strings.

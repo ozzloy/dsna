@@ -12,15 +12,16 @@ t00 = "carrace";
 expect00 = true;
 
 s01 = "jar";
-t00 = "jam";
-expect00 = false;
+t01 = "jam";
+expect01 = false;
 
 const test = (name, s, t, expect) => {
   const solver = new Solution();
   const actual = solver.isAnagram(s, t);
   if (expect === actual) return;
   console.log("name", name);
-  console.log("nums", s);
+  console.log("s", s);
+  console.log("t", t);
   console.log("expect", expect);
   console.log("actual", actual);
   process.exit(1);
