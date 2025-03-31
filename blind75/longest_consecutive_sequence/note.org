@@ -1,4 +1,7 @@
 * longest consecutive sequence
+
+https://neetcode.io/problems/longest-consecutive-sequence
+
 Given an array of integers nums, return the length of the longest
 consecutive sequence of elements that can be formed.
 

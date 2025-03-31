@@ -1,20 +1,29 @@
 class Solution {
   /**
    * @param {number[]} nums
-   * @return {number}
+   * @return {boolean}
    */
-  longestConsecutive(nums) {}
+  hasDuplicate(nums) {
+    let newSet = new Set();
+    for (let i = 0; i < nums.length; i++) {
+      if (newSet.has(nums[i])) {
+        return true;
+      }
+      newSet.add(nums[i]);
+    }
+    return false;
+  }
 }
 
-nums00 = [2, 20, 4, 10, 3, 4, 5];
-expect00 = 4;
+nums00 = [1, 2, 3, 3];
+expect00 = true;
 
-nums01 = [0, 3, 2, 5, 4, 6, 1, 1];
-expect01 = 7;
+nums01 = [1, 2, 3, 4];
+expect01 = false;
 
 const test = (name, nums, expect) => {
   const solver = new Solution();
-  const actual = solver.isAnagram(s, t);
+  const actual = solver.hasDuplicate(nums);
   if (expect === actual) return;
   console.log("name", name);
   console.log("nums", nums);
