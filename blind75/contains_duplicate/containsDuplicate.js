@@ -3,14 +3,11 @@ class Solution {
    * @param {number[]} nums
    * @return {boolean}
    */
-  hasDuplicate(nums) {
-    let newSet = new Set();
-    for (let i = 0; i < nums.length; i++) {
-      if (newSet.has(nums[i])) {
-        return true;
-      }
-      newSet.add(nums[i]);
-    }
+  hasDuplicate(numbers) {
+    const seen = new Set();
+    for (const number of numbers)
+      if (seen.has(number)) return true;
+      else seen.add(number);
     return false;
   }
 }
